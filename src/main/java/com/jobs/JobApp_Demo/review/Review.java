@@ -1,5 +1,6 @@
 package com.jobs.JobApp_Demo.review;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jobs.JobApp_Demo.company.Company;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,10 +14,12 @@ import lombok.NoArgsConstructor;
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long Id;
+    Long id;
     String review;
+    String description;
+    Double rating;
 
-
+    @JsonIgnore
     @ManyToOne
     Company company;
 }

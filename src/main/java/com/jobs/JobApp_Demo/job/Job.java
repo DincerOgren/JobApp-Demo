@@ -1,5 +1,6 @@
 package com.jobs.JobApp_Demo.job;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jobs.JobApp_Demo.company.Company;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,6 +23,7 @@ public class Job {
     private String minSalary;
     private String maxSalary;
 
+    @JsonIgnore
     @ManyToOne
     Company company;
 }

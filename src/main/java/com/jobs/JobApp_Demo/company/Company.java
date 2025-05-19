@@ -17,15 +17,16 @@ import java.util.List;
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long Id;
+    Long id;
     String companyName;
     String companyAddress;
     String companyEmail;
     Integer companyPhone;
 
-    @JsonIgnore
+
     @OneToMany(mappedBy = "company",cascade = CascadeType.ALL)
     List<Review> reviews;
+
 
     @OneToMany(mappedBy = "company",cascade = CascadeType.ALL)
     List<Job> jobs;
