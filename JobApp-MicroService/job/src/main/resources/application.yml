@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: job-service
+
+  data:
+    mongodb:
+      uri: mongodb+srv://dincergrn:TfcVz9YfM4pGf2bN@job-data.bjfsbrx.mongodb.net/?retryWrites=true&w=majority&appName=job-data
+      database: jobdb
+
+
+server:
+  port: 8082
