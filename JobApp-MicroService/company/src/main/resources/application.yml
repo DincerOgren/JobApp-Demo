@@ -3,15 +3,18 @@ spring:
     name: company-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/companydb
-    username: dincergrn
-    password: dincer123
+    #url: jdbc:postgresql://localhost:5432/companydb
+    url: jdbc:mysql://localhost:3307/dincergr
+    username: dincergr
+    password: dincergr
   jpa:
     show-sql: true
-    database: postgresql
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate:
+        format_sql: true
 
 server:
   port: 8081
