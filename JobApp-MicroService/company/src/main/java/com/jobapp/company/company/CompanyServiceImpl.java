@@ -13,6 +13,11 @@ public class CompanyServiceImpl implements CompanyService {
     CompanyRepository companyRepository;
 
     @Override
+    public Optional<Company> companyExist(Long id){
+        return companyRepository.findById(id);
+    }
+
+    @Override
     public String addCompany(Company company) {
         Company savedComp = companyRepository.save(company);
         return "Company added successfully"+savedComp.toString();

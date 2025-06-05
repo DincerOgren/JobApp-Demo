@@ -21,7 +21,4 @@ public class Company {
     String companyEmail;
     Integer companyPhone;
 
-
-
-
 }

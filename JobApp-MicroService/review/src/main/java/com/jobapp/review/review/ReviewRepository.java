@@ -1,5 +1,6 @@
 package com.jobapp.review.review;
 
+import com.jobapp.review.models.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

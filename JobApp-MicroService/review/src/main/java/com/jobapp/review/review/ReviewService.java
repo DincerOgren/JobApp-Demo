@@ -1,11 +1,13 @@
 package com.jobapp.review.review;
 
+import com.jobapp.review.models.Review;
+
 import java.util.List;
 
 public interface ReviewService {
     List<Review> getAllCompanyReviews(Long companyId);
 
-    String addReviewToCompany(Long companyId, Review review);
+    Boolean addReviewToCompany(Long companyId, Review review);
 
     List<Review> getAllReviews();
 

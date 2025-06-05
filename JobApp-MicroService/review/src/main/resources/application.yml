@@ -1,18 +1,5 @@
 spring:
   application:
     name: review-service
-
-  datasource:
-    #url: jdbc:postgresql://localhost:5432/reviewdb
-    url: jdbc:postgresql://ep-patient-unit-a4qp1vev-pooler.us-east-1.aws.neon.tech/review-service?sslmode=require
-    username: review-service_owner
-    password: ${postgresql_pass}
-  jpa:
-    show-sql: true
-    database: postgresql
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-server:
-  port: 8083
+  config:
+    import: optional:configserver:http://localhost:8888

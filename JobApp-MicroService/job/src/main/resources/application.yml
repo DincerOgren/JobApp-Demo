@@ -1,12 +1,5 @@
 spring:
   application:
     name: job-service
-
-  data:
-    mongodb:
-      uri: ${ATLAS_SECRET}
-      database: jobdb
-
-
-server:
-  port: 8082
+  config:
+    import: optional:configserver:http://localhost:8888

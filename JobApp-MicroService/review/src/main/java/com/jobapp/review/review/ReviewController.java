@@ -1,5 +1,6 @@
 package com.jobapp.review.review;
 
+import com.jobapp.review.models.Review;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,8 @@ public class ReviewController {
 
     @Autowired
     ReviewService reviewService;
+
+
 
     @GetMapping("/reviews")
     public ResponseEntity<List<Review>> getAllReviews() {
@@ -39,10 +42,13 @@ public class ReviewController {
     }
 
 
+
     @PostMapping("/{companyId}/reviews")
     public ResponseEntity<String> addReview(@PathVariable Long companyId ,@RequestBody Review review){
-
-        return new ResponseEntity<>(reviewService.addReviewToCompany(companyId, review), HttpStatus.CREATED);
+        if (reviewService.addReviewToCompany(companyId, review))
+            return new ResponseEntity<>("Review successfully added to company: "+companyId,HttpStatus.CREATED);
+        else
+            return new ResponseEntity<>("Cant find related company with id: "+companyId,HttpStatus.BAD_REQUEST);
     }
 
     @PutMapping("/{companyId}/reviews/{reviewId}")

@@ -1,4 +1,4 @@
-package com.jobapp.review.review;
+package com.jobapp.review.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

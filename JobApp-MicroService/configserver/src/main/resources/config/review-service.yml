@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    #url: jdbc:postgresql://localhost:5432/reviewdb
+    url: jdbc:postgresql://ep-patient-unit-a4qp1vev-pooler.us-east-1.aws.neon.tech/review-service?sslmode=require
+    username: review-service_owner
+    password: ${postgresql_pass}
+  jpa:
+    show-sql: true
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  port: 8083
+
+app:
+  message: "Hello review service!"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+

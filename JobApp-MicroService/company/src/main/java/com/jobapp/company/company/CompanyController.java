@@ -15,6 +15,7 @@ public class CompanyController {
     @Autowired
     private CompanyService companyService;
 
+
     @GetMapping
     public ResponseEntity<List<Company>> getAllCompanies() {
         List<Company> companies=companyService.getAllCompanies();
@@ -54,4 +55,11 @@ public class CompanyController {
         return new ResponseEntity<>("Company is not found",HttpStatus.NOT_FOUND);
     }
 
+    @GetMapping("/company-exist/{id}")
+    public ResponseEntity<Company> companyExist(@PathVariable Long id) {
+
+        return companyService.companyExist(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(()-> ResponseEntity.notFound().build());
+    }
 }
