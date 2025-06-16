@@ -31,6 +31,9 @@ public class JobController {
     @PostMapping
     public ResponseEntity<String>  addJob(@RequestBody Job job) {
         job.setId(null);
+        if (job.getCompany() == null || job.getCompany().getId() == null) {
+            return new ResponseEntity<>("Can't create job without company", HttpStatus.BAD_REQUEST);
+        }
         return new ResponseEntity<>(jobService.addJob(job), HttpStatus.CREATED);
     }
 

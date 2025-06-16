@@ -1,0 +1,239 @@
+2025-06-15T19:11:28.447+03:00  INFO 10512 --- [review-service] [main] com.jobapp.review.ReviewApplication      : Starting ReviewApplication using Java 24.0.1 with PID 10512 (D:\Java Workspace\JobApp-Demo\JobApp-MicroService\review\target\classes started by dinoc in D:\Java Workspace\JobApp-Demo\JobApp-MicroService)
+2025-06-15T19:11:28.450+03:00  INFO 10512 --- [review-service] [main] com.jobapp.review.ReviewApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-06-15T19:11:28.496+03:00  INFO 10512 --- [review-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-06-15T19:11:28.496+03:00  INFO 10512 --- [review-service] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=review-service, profiles=[default], label=null, version=null, state=null
+2025-06-15T19:11:30.046+03:00  INFO 10512 --- [review-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-15T19:11:30.182+03:00  INFO 10512 --- [review-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 1 JPA repository interface.
+2025-06-15T19:11:30.477+03:00  INFO 10512 --- [review-service] [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-06-15T19:11:30.487+03:00  INFO 10512 --- [review-service] [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-06-15T19:11:30.634+03:00  INFO 10512 --- [review-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8f2c8b68-d609-36e4-b324-26bc8432be95
+2025-06-15T19:11:31.273+03:00  INFO 10512 --- [review-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2025-06-15T19:11:31.291+03:00  INFO 10512 --- [review-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-15T19:11:31.292+03:00  INFO 10512 --- [review-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-15T19:11:31.373+03:00  INFO 10512 --- [review-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-15T19:11:31.373+03:00  INFO 10512 --- [review-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2875 ms
+2025-06-15T19:11:31.821+03:00  INFO 10512 --- [review-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-15T19:11:31.881+03:00  INFO 10512 --- [review-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-15T19:11:31.934+03:00  INFO 10512 --- [review-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-15T19:11:32.309+03:00  INFO 10512 --- [review-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-15T19:11:32.399+03:00  INFO 10512 --- [review-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-15T19:11:35.127+03:00  INFO 10512 --- [review-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4d1f168
+2025-06-15T19:11:35.128+03:00  INFO 10512 --- [review-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-15T19:11:35.483+03:00  WARN 10512 --- [review-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-15T19:11:35.829+03:00  INFO 10512 --- [review-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-15T19:11:37.405+03:00  INFO 10512 --- [review-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-15T19:11:38.524+03:00  INFO 10512 --- [review-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-15T19:11:39.520+03:00  WARN 10512 --- [review-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-15T19:11:40.892+03:00  WARN 10512 --- [review-service] [main] c.f.c.c.BeanFactoryAwareFunctionRegistry : Failed to locate function 'busConsumer' for function definition 'busConsumer'. Returning null.
+2025-06-15T19:11:41.023+03:00  INFO 10512 --- [review-service] [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'review-service.springCloudBusInput' has 1 subscriber(s).
+2025-06-15T19:11:41.465+03:00  INFO 10512 --- [review-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-06-15T19:11:41.555+03:00  WARN 10512 --- [review-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-06-15T19:11:41.571+03:00  INFO 10512 --- [review-service] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 24 endpoints beneath base path '/actuator'
+2025-06-15T19:11:41.800+03:00  INFO 10512 --- [review-service] [main] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel errorChannel
+2025-06-15T19:11:41.808+03:00  INFO 10512 --- [review-service] [main] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel springCloudBusInput
+2025-06-15T19:11:41.815+03:00  INFO 10512 --- [review-service] [main] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel nullChannel
+2025-06-15T19:11:41.822+03:00  INFO 10512 --- [review-service] [main] figuration$IntegrationJmxConfiguration$1 : Registering MessageHandler _org.springframework.integration.errorLogger
+2025-06-15T19:11:41.839+03:00  INFO 10512 --- [review-service] [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-06-15T19:11:41.840+03:00  INFO 10512 --- [review-service] [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'review-service.errorChannel' has 1 subscriber(s).
+2025-06-15T19:11:41.841+03:00  INFO 10512 --- [review-service] [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2025-06-15T19:11:41.915+03:00  INFO 10512 --- [review-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-06-15T19:11:41.948+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-06-15T19:11:41.953+03:00  INFO 10512 --- [review-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-06-15T19:11:41.965+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-06-15T19:11:41.966+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-06-15T19:11:41.966+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-06-15T19:11:41.967+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-06-15T19:11:41.967+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-06-15T19:11:41.967+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-06-15T19:11:41.968+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-06-15T19:11:42.207+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-06-15T19:11:42.210+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-06-15T19:11:42.213+03:00  INFO 10512 --- [review-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-06-15T19:11:42.215+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1750003902215 with initial instances count: 2
+2025-06-15T19:11:42.221+03:00  INFO 10512 --- [review-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REVIEW-SERVICE with eureka with status UP
+2025-06-15T19:11:42.222+03:00  INFO 10512 --- [review-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1750003902222, current=UP, previous=STARTING]
+2025-06-15T19:11:42.225+03:00  INFO 10512 --- [review-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REVIEW-SERVICE/Dincer.mshome.net:review-service:8083: registering service...
+2025-06-15T19:11:42.226+03:00  INFO 10512 --- [review-service] [main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
+2025-06-15T19:11:42.226+03:00  INFO 10512 --- [review-service] [main] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for rabbit
+2025-06-15T19:11:42.290+03:00  INFO 10512 --- [review-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REVIEW-SERVICE/Dincer.mshome.net:review-service:8083 - registration status: 204
+2025-06-15T19:11:42.379+03:00  INFO 10512 --- [review-service] [main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
+2025-06-15T19:11:42.420+03:00  INFO 10512 --- [review-service] [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw, bound to: springCloudBus
+2025-06-15T19:11:42.430+03:00  INFO 10512 --- [review-service] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:42.457+03:00  INFO 10512 --- [review-service] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:42.462+03:00  INFO 10512 --- [review-service] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:42.491+03:00  INFO 10512 --- [review-service] [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-1045730597.springCloudBusInput.errors' has 1 subscriber(s).
+2025-06-15T19:11:42.493+03:00  INFO 10512 --- [review-service] [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-1045730597.springCloudBusInput.errors' has 2 subscriber(s).
+2025-06-15T19:11:42.497+03:00  INFO 10512 --- [review-service] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:42.512+03:00  INFO 10512 --- [review-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: getsockopt
+2025-06-15T19:11:42.523+03:00  INFO 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:42.543+03:00  INFO 10512 --- [review-service] [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw'
+2025-06-15T19:11:42.573+03:00  INFO 10512 --- [review-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2025-06-15T19:11:42.575+03:00  INFO 10512 --- [review-service] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2025-06-15T19:11:42.613+03:00  INFO 10512 --- [review-service] [main] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel rabbit-1045730597.springCloudBusInput.errors
+2025-06-15T19:11:42.659+03:00  INFO 10512 --- [review-service] [main] com.jobapp.review.ReviewApplication      : Started ReviewApplication in 15.598 seconds (process running for 16.821)
+2025-06-15T19:11:43.143+03:00  INFO 10512 --- [review-service] [RMI TCP Connection(2)-192.168.1.104] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:43.151+03:00  INFO 10512 --- [review-service] [RMI TCP Connection(4)-192.168.1.104] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-15T19:11:43.151+03:00  INFO 10512 --- [review-service] [RMI TCP Connection(4)-192.168.1.104] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-15T19:11:43.155+03:00  INFO 10512 --- [review-service] [RMI TCP Connection(4)-192.168.1.104] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-06-15T19:11:43.183+03:00  WARN 10512 --- [review-service] [RMI TCP Connection(2)-192.168.1.104] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2262) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.2.7.jar:6.2.7]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:627) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:790) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1392) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:777) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:351) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:166) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:543) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:744) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:623) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:665) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.25.0.jar:5.25.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.25.0.jar:5.25.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.25.0.jar:5.25.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	... 41 common frames omitted
+
+2025-06-15T19:11:43.190+03:00  INFO 10512 --- [review-service] [RMI TCP Connection(2)-192.168.1.104] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:43.213+03:00  WARN 10512 --- [review-service] [RMI TCP Connection(2)-192.168.1.104] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:632) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:726) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2262) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2235) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2215) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.2.7.jar:6.2.7]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-3.5.0.jar:3.5.0]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:627) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:790) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1392) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:777) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:351) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:166) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:543) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:744) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:623) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:665) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:61) ~[amqp-client-5.25.0.jar:5.25.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1249) ~[amqp-client-5.25.0.jar:5.25.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198) ~[amqp-client-5.25.0.jar:5.25.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:678) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:647) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:593) ~[spring-rabbit-3.2.5.jar:3.2.5]
+	... 43 common frames omitted
+
+2025-06-15T19:11:47.608+03:00  WARN 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-06-15T19:11:47.616+03:00  INFO 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@64ee4b14: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-06-15T19:11:47.620+03:00  INFO 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:52.634+03:00  WARN 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-2] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-06-15T19:11:52.634+03:00  INFO 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-2] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@28bbd99b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-06-15T19:11:52.636+03:00  INFO 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:57.653+03:00  WARN 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-3] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-06-15T19:11:57.653+03:00  INFO 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-3] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@574cabff: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-06-15T19:11:57.657+03:00  INFO 10512 --- [review-service] [springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-06-15T19:11:59.125+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application REVIEW-SERVICE with eureka with status DOWN
+2025-06-15T19:11:59.125+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1750003919125, current=DOWN, previous=UP]
+2025-06-15T19:11:59.125+03:00  INFO 10512 --- [review-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REVIEW-SERVICE/Dincer.mshome.net:review-service:8083: registering service...
+2025-06-15T19:11:59.130+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-15T19:11:59.135+03:00  INFO 10512 --- [review-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REVIEW-SERVICE/Dincer.mshome.net:review-service:8083 - registration status: 204
+2025-06-15T19:11:59.137+03:00  INFO 10512 --- [review-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-15T19:11:59.142+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-06-15T19:11:59.142+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-06-15T19:11:59.142+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.vyIoP5-9T3yXJtc-KlIZvw'
+2025-06-15T19:11:59.147+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'review-service.rabbit-1045730597.springCloudBusInput.errors' has 1 subscriber(s).
+2025-06-15T19:11:59.148+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'review-service.rabbit-1045730597.springCloudBusInput.errors' has 0 subscriber(s).
+2025-06-15T19:11:59.165+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-06-15T19:11:59.165+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'review-service.errorChannel' has 0 subscriber(s).
+2025-06-15T19:11:59.165+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2025-06-15T19:11:59.176+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-15T19:11:59.178+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-15T19:11:59.293+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-15T19:11:59.294+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-06-15T19:12:02.296+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-06-15T19:12:02.307+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REVIEW-SERVICE/Dincer.mshome.net:review-service:8083 - deregister  status: 200
+2025-06-15T19:12:02.308+03:00  INFO 10512 --- [review-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

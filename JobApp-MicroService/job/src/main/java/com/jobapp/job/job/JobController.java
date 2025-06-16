@@ -31,7 +31,12 @@ public class JobController {
     @PostMapping
     public ResponseEntity<String>  addJob(@RequestBody Job job) {
         job.setId(null);
-        return new ResponseEntity<>(jobService.addJob(job), HttpStatus.CREATED);
+        if (jobService.addJob(job)) {
+            return new ResponseEntity<>("Job added successfully",HttpStatus.CREATED);
+        }
+        else {
+            return new ResponseEntity<>("Company cant be empty when creating a job",HttpStatus.CONFLICT);
+        }
     }
 
     @PutMapping("/update/{id}")

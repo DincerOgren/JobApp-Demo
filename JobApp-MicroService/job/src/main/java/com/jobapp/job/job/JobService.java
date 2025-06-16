@@ -5,7 +5,7 @@ import java.util.List;
 public interface JobService {
     List<Job> getAllJos();
 
-    String addJob(Job job);
+    Boolean addJob(Job job);
 
 
     Job getJobWithId(String id);

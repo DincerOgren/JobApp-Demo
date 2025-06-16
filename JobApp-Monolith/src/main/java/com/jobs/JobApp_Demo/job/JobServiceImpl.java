@@ -1,5 +1,6 @@
 package com.jobs.JobApp_Demo.job;
 
+import com.jobs.JobApp_Demo.company.Company;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,10 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public String addJob(Job job) {
-
+        Company company = job.getCompany();
+        if (company == null) {
+            return "Company is null";
+        }
         Job savedJob = jobRepository.save(job);
         return savedJob.toString();
     }
