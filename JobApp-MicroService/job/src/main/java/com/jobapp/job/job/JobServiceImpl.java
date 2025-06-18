@@ -1,5 +1,8 @@
 package com.jobapp.job.job;
 
+import com.jobapp.job.clients.httpinterface.CompanyServiceClient;
+import com.jobapp.job.models.Company;
+import com.jobapp.job.models.Job;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +17,8 @@ public class JobServiceImpl implements JobService {
     @Autowired
     JobRepository jobRepository;
 
+    @Autowired
+    CompanyServiceClient companyServiceInterface;
 
     @Override
     public List<Job> getAllJos() {
@@ -27,6 +32,13 @@ public class JobServiceImpl implements JobService {
             log.warn("Company is null when adding new job");
             return false;
         }
+
+        Company company = companyServiceInterface.getCompanyDetails(job.getCompanyId());
+        if (company == null){
+            log.warn("Company does not exist when adding new job with id: {}", job.getCompanyId());
+            return false;
+        }
+
         Job savedJob = jobRepository.save(job);
         log.info("Job added successfully with id: {}", savedJob.getId());
         return true;

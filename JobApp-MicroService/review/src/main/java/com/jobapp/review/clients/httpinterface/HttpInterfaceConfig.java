@@ -15,15 +15,15 @@ public class HttpInterfaceConfig {
 
     public final  String SERVICE_NAME = "company-service";
 
-    @Bean
-    @LoadBalanced
-    public RestClient.Builder restClientBuilder() {
-        return RestClient.builder();
-    }
+//    @Bean
+//    @LoadBalanced
+//    public RestClient.Builder restClientBuilder() {
+//        return RestClient.builder();
+//    }
 
     @Bean
     // USING REST CLIENT
-    public CompanyServiceClient providerHttpInterface(RestClient.Builder builder) {
+    public CompanyServiceClient reviewToCompanyInterface(RestClient.Builder builder) {
         RestClient restClient = builder
                                     .baseUrl("http://"+SERVICE_NAME)
                                     .defaultStatusHandler(HttpStatusCode::is4xxClientError,

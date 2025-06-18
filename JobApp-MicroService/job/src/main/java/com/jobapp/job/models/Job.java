@@ -1,4 +1,4 @@
-package com.jobapp.job.job;
+package com.jobapp.job.models;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

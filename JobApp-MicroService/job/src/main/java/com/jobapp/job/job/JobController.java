@@ -1,5 +1,6 @@
 package com.jobapp.job.job;
 
+import com.jobapp.job.models.Job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
