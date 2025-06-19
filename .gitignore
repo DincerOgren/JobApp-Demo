@@ -1,0 +1,5 @@
+# Ignore all .idea folders anywhere in the repo
+.idea/
+
+# Ignore all .data files anywhere in the repo
+*.data/

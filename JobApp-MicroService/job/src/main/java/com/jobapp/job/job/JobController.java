@@ -36,7 +36,7 @@ public class JobController {
             return new ResponseEntity<>("Job added successfully",HttpStatus.CREATED);
         }
         else {
-            return new ResponseEntity<>("Company cant be empty when creating a job",HttpStatus.CONFLICT);
+            return new ResponseEntity<>("Company cant be empty when creating a job",HttpStatus.BAD_REQUEST);
         }
     }
 

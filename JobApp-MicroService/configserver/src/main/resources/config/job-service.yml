@@ -19,6 +19,14 @@ management:
   tracing:
     sampling:
       probability: 1.0
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+
+
 
 
 server:
@@ -33,6 +41,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka
     fetch-registry: true
     register-with-eureka: true
+  instance:
+    prefer-ip-address: true
 
 
 logging:
@@ -42,3 +52,17 @@ logging:
     rollingpolicy:
       max-file-size: 3MB
       max-history: 3 #Day
+
+#Resilince4j
+resilience4j:
+  circuitbreaker:
+    instances:
+      companyService:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        slidingWindowType: count_based

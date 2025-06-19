@@ -1,0 +1,70 @@
+#spring:
+#  cloud:
+#    gateway:
+#      server:
+#        webflux:
+#          routes:
+#            - id: company-service
+#              uri: lb://COMPANY-SERVICE #http://localhost:8081
+#              predicates:
+#                - Path=/companies/**
+#            - id: job-service
+#              uri: lb://JOB-SERVICE #http://localhost:8082
+#              predicates:
+#                - Path=/jobs/**
+#            - id: review-service
+#              uri: lb://REVIEW-SERVICE #http://localhost:8083
+#              predicates:
+#                - Path=/companyreviews/**
+#            - id: eureka-server
+#              uri: http://localhost:8761
+#              predicates:
+#                - Path=/eureka/main
+#              filters:
+#                - SetPath=/
+#            - id: eureka-server-static
+#              uri: http://localhost:8761
+#              predicates:
+#                - Path=/eureka/**
+
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+
+#Resilince4j
+resilience4j:
+  circuitbreaker:
+    instances:
+      appBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        slidingWindowType: count_based

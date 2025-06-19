@@ -3,6 +3,7 @@ package com.jobapp.job.job;
 import com.jobapp.job.clients.httpinterface.CompanyServiceClient;
 import com.jobapp.job.models.Company;
 import com.jobapp.job.models.Job;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ public class JobServiceImpl implements JobService {
         return jobRepository.findAll();
     }
 
+    @CircuitBreaker(name = "companyService",fallbackMethod = "addJobFallback")
     @Override
     public Boolean addJob(Job job) {
 
@@ -42,6 +44,12 @@ public class JobServiceImpl implements JobService {
         Job savedJob = jobRepository.save(job);
         log.info("Job added successfully with id: {}", savedJob.getId());
         return true;
+    }
+
+    public boolean addJobFallback(Job job,
+                                  Exception exception) {
+        System.out.println("FALLBACK CALLED EXCEPTION: "+ exception.getMessage());
+        return false;
     }
 
     @Override
