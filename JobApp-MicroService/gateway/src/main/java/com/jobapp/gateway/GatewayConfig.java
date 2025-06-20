@@ -13,12 +13,21 @@ public class GatewayConfig {
         return builder.routes()
                 .route("company-service",r  -> r
                     .path("/companies/**")
+                    .filters(f->f.circuitBreaker(config -> config
+                            .setName("appBreaker")
+                            .setFallbackUri("forward:/fallback/company")))
                     .uri("lb://COMPANY-SERVICE"))
                 .route("job-service",r  -> r
                         .path("/jobs/**")
+                        .filters(f->f.circuitBreaker(config -> config
+                                .setName("appBreaker")
+                                .setFallbackUri("forward:/fallback/jobs")))
                         .uri("lb://JOB-SERVICE"))
                 .route("review-service",r  -> r
                         .path("/companyreviews/**")
+                        .filters(f->f.circuitBreaker(config -> config
+                                .setName("appBreaker")
+                                .setFallbackUri("forward:/fallback/reviews")))
                         .uri("lb://REVIEW-SERVICE"))
                 .route("eureka-sever",r  -> r
                         .path("/eureka/main")
