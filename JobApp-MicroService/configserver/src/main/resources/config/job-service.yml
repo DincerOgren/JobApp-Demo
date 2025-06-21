@@ -27,7 +27,13 @@ management:
       enabled: true
 
 
-
+rabbitmq:
+  exchange:
+    name: job.exchange
+  queue:
+    name: job.queue
+  routing:
+    key: job.tracking
 
 server:
   port: 8082
@@ -66,3 +72,15 @@ resilience4j:
         failureRateThreshold: 50
         automaticTransitionFromOpenToHalfOpenEnabled: true
         slidingWindowType: count_based
+  retry:
+    instances:
+      jobRetryCompany:
+        maxAttempts: 5
+        waitDuration: 500ms
+
+  ratelimiter:
+    instances:
+      messageLimiter:
+        timeout-duration: 0
+        limit-refresh-period: 4s
+        limit-for-period:  2

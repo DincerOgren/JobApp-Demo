@@ -4,11 +4,14 @@ import com.jobapp.job.clients.httpinterface.CompanyServiceClient;
 import com.jobapp.job.models.Company;
 import com.jobapp.job.models.Job;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -21,15 +24,22 @@ public class JobServiceImpl implements JobService {
     @Autowired
     CompanyServiceClient companyServiceInterface;
 
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+    private int attempts = 0;
+
     @Override
     public List<Job> getAllJos() {
         return jobRepository.findAll();
     }
 
-    @CircuitBreaker(name = "companyService",fallbackMethod = "addJobFallback")
+    //@CircuitBreaker(name = "companyService",fallbackMethod = "addJobFallback")
+    @Retry(name = "jobRetryCompany",fallbackMethod = "addJobFallback")
     @Override
     public Boolean addJob(Job job) {
 
+        System.out.println("addjob retry atempts: "+ ++attempts);
         if (job.getCompanyId() == null){
             log.warn("Company is null when adding new job");
             return false;
@@ -43,6 +53,10 @@ public class JobServiceImpl implements JobService {
 
         Job savedJob = jobRepository.save(job);
         log.info("Job added successfully with id: {}", savedJob.getId());
+
+        rabbitTemplate.convertAndSend("job.exchange","job.tracking",
+                Map.of("companyId",savedJob.getCompanyId(),"status","CREATED"));
+
         return true;
     }
 
