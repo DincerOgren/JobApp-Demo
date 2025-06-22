@@ -1,14 +1,14 @@
 package com.jobapp.job.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-
-@Document(collection = "jobs")
 @Data
-public class Job {
-   @Id
+@NoArgsConstructor
+@AllArgsConstructor
+public class JobResponseDTO {
     private String id;
     private String title;
     private String description;

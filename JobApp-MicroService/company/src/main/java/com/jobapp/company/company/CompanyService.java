@@ -1,18 +1,24 @@
 package com.jobapp.company.company;
 
+import com.jobapp.company.models.Company;
+import com.jobapp.company.models.CompanyRequestDTO;
+import com.jobapp.company.models.CompanyResponse;
+import com.jobapp.company.models.CompanyResponseDTO;
+
 import java.util.List;
 import java.util.Optional;
 
 public interface CompanyService {
-    List<Company> getAllCompanies();
+    CompanyResponse getAllCompanies(Integer pageNumber, Integer pageSize,
+                                          String sortBy, String sortOrder, String keyword);
 
-    Optional<Company> companyExist(Long id);
+//    Optional<Company> companyExist(Long id);
 
-    String addCompany(Company company);
+    CompanyResponseDTO addCompany(CompanyRequestDTO companyRequestDTO);
 
-    Company getCompanyWithId(Long id);
+    Optional<CompanyResponseDTO> getCompanyWithId(Long id);
 
-    boolean updateCompanyWithId(Long id, Company updatedCompany);
+    CompanyResponseDTO updateCompanyWithId(Long id, CompanyRequestDTO updatedCompanyDTO);
 
     boolean deleteCompany(Long id);
 }
