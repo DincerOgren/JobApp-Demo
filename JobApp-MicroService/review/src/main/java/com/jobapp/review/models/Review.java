@@ -13,7 +13,7 @@ public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String review;
+    String reviewTitle;
     String description;
     Double rating;
 

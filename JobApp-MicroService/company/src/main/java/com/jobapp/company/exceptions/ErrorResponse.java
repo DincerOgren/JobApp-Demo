@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+import java.util.Map;
+
 @Schema(description = "Standard error response")
 @Data
 @NoArgsConstructor
@@ -21,5 +24,9 @@ public class ErrorResponse {
 
     @Schema(description = "Error detail message", example = "Company not found with id: 123")
     private String message;
+
+    @Schema(description = "Validation errors")
+    private List<Map<String, String>> errors = null;
+
 
 }

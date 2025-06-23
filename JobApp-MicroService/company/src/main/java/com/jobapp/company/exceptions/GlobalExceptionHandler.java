@@ -34,7 +34,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, Object>> handleValidationErrors(MethodArgumentNotValidException ex) {
+    public ResponseEntity<ErrorResponse> handleValidationErrors(MethodArgumentNotValidException ex) {
         List<Map<String, String>> errors = ex.getBindingResult().getFieldErrors()
                 .stream()
                 .map(err -> Map.of(
@@ -42,12 +42,14 @@ public class GlobalExceptionHandler {
                         "error", err.getDefaultMessage()))
                 .toList();
 
-        Map<String, Object> body = Map.of(
-                "timestamp", LocalDateTime.now().toString(),
-                "status", HttpStatus.BAD_REQUEST.value(),
-                "error", "Bad Request",
-                "errors", errors
-        );
-        return ResponseEntity.badRequest().body(body);
+        ErrorResponse errorResponse = new ErrorResponse();
+        errorResponse.setTimestamp(LocalDateTime.now().toString());
+        errorResponse.setStatus(HttpStatus.BAD_REQUEST.value());
+        errorResponse.setError(HttpStatus.BAD_REQUEST.getReasonPhrase());
+        errorResponse.setMessage("Validation failed for one or more fields");
+        errorResponse.setErrors(errors);
+
+        return ResponseEntity.badRequest().body(errorResponse);
     }
+
 }

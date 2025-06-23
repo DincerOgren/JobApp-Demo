@@ -30,7 +30,7 @@ public class CompanyController {
     private final CompanyService companyService;
 
     // GET ALL COMPANIES
-    @Operation(summary = "Get all companies", description = "Returns a list of all companies")
+    @Operation(summary = "Get all companies", description = "Returns a paginated list of companies")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "List of companies returned"),
             @ApiResponse(responseCode = "204", description = "No companies found")
@@ -57,6 +57,7 @@ public class CompanyController {
             @ApiResponse(responseCode = "404", description = "Company not found",
                     content = @Content(schema = @Schema(implementation = ErrorResponse.class)))
     })
+    @GetMapping("/{id}")
     public ResponseEntity<CompanyResponseDTO> getCompany(@PathVariable Long id) {
         return companyService.getCompanyWithId(id)
                 .map(ResponseEntity::ok)

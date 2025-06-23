@@ -1,19 +1,22 @@
 package com.jobapp.review.review;
 
-import com.jobapp.review.models.Review;
-
-import java.util.List;
+import com.jobapp.review.models.ReviewRequestDTO;
+import com.jobapp.review.models.ReviewResponse;
+import com.jobapp.review.models.ReviewResponseDTO;
 
 public interface ReviewService {
-    List<Review> getAllCompanyReviews(Long companyId);
+    ReviewResponse getAllReviews(Integer pageNumber, Integer pageSize, String sortBy,
+                                 String sortOrder, String keyword);
 
-    Boolean addReviewToCompany(Long companyId, Review review);
+    ReviewResponse getAllCompanyReviews(Integer pageNumber, Integer pageSize, String sortBy,
+                                        String sortOrder, String keyword, Long companyId);
 
-    List<Review> getAllReviews();
+    ReviewResponseDTO addReviewToCompany(Long companyId, ReviewRequestDTO reviewRequestDTO);
 
-    Review getReview(Long companyId, Long reviewId);
 
-    String updateReview(Long companyId, Long reviewId, Review review);
+    ReviewResponseDTO getReview(Long companyId, Long reviewId);
 
-    String deleteReview(Long companyId, Long reviewId);
+    ReviewResponseDTO updateReview(Long companyId, Long reviewId, ReviewRequestDTO reviewRequestDTO);
+
+    boolean deleteReview(Long companyId, Long reviewId);
 }

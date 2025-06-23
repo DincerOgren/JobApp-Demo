@@ -1,9 +1,6 @@
 package com.jobapp.job.models;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class JobRequestDTO {
     @NotBlank(message = "Title is required")
-    @Size(max = 100, message = "Title must be at most 100 characters")
     private String title;
 
     @NotBlank(message = "Description is required")
@@ -33,6 +29,7 @@ public class JobRequestDTO {
     private Integer maxSalary;
 
     @NotNull(message = "Company ID is required")
+    @Positive(message = "Company ID must be a positive number")
     private Long companyId;
 
 }

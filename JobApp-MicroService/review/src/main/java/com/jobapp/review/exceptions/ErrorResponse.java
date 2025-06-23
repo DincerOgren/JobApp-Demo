@@ -1,4 +1,4 @@
-package com.jobapp.job.exceptions;
+package com.jobapp.review.exceptions;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -27,5 +27,6 @@ public class ErrorResponse {
 
     @Schema(description = "Validation errors")
     private List<Map<String, String>> errors = null;
+
 
 }

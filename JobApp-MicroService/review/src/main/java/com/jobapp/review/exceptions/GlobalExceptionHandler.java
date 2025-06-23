@@ -1,5 +1,4 @@
-package com.jobapp.job.exceptions;
-
+package com.jobapp.review.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,14 +13,13 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-
-    @ExceptionHandler(ServiceUnavailableException.class)
-    public ResponseEntity<ErrorResponse> handleServiceUnavailable(ServiceUnavailableException ex) {
-        ErrorResponse error = new ErrorResponse();
-        error.setMessage(ex.getMessage());
-        error.setTimestamp(LocalDateTime.now().toString());
-        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(error);
-    }
+//    @ExceptionHandler(ServiceUnavailableException.class)
+//    public ResponseEntity<ErrorResponse> handleServiceUnavailable(ServiceUnavailableException ex) {
+//        ErrorResponse error = new ErrorResponse();
+//        error.setMessage(ex.getMessage());
+//        error.setTimestamp(LocalDateTime.now().toString());
+//        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(error);
+//    }
 
 
     @ExceptionHandler(CompanyNotFoundException.class)
@@ -34,12 +32,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
 
-    @ExceptionHandler(CompanyNullException.class)
-    public ResponseEntity<ErrorResponse> handleCompanyNull(CompanyNullException ex) {
+    @ExceptionHandler(ReviewNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleCompanyNull(ReviewNotFoundException ex) {
         ErrorResponse error = new ErrorResponse();
         error.setTimestamp(LocalDateTime.now().toString());
         error.setStatus(HttpStatus.NOT_FOUND.value());
-        error.setError("Object is Empty");
+        error.setError("Review Not Found");
         error.setMessage(ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
