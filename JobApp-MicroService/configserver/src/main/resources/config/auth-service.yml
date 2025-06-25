@@ -1,0 +1,54 @@
+spring:
+  datasource:
+    #url: jdbc:postgresql://localhost:5432/companydb
+    url: jdbc:mysql://localhost:3307/dincergr
+    username: ${DB_USER}
+    password: ${DB_PASS}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  app:
+    jwtSecret: M9I6vAzZgxgTVKe9ZzMZy7OLs/ly1G7d0ozukNY6hGE=
+    jwtExpirationMs: 3000000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  tracing:
+    sampling:
+      probability: 1.0
+
+server:
+  port: 8085
+
+app:
+  message: "Hello auth service!"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+
+logging:
+  file:
+    name: logs/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 3MB
+      max-history: 3 #Day

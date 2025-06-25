@@ -26,6 +26,12 @@ public class GatewayConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
+                .route("review-service",r  -> r
+                        .path("/companies/reviews/**")
+                        .filters(f->f.circuitBreaker(config -> config
+                                .setName("appBreaker")
+                                .setFallbackUri("forward:/fallback/reviews")))
+                        .uri("lb://REVIEW-SERVICE"))
                 .route("company-service",r  -> r
                     .path("/companies/**")
                     .filters(f->f
@@ -46,12 +52,9 @@ public class GatewayConfig {
                                 .setName("appBreaker")
                                 .setFallbackUri("forward:/fallback/jobs")))
                         .uri("lb://JOB-SERVICE"))
-                .route("review-service",r  -> r
-                        .path("/companyreviews/**")
-                        .filters(f->f.circuitBreaker(config -> config
-                                .setName("appBreaker")
-                                .setFallbackUri("forward:/fallback/reviews")))
-                        .uri("lb://REVIEW-SERVICE"))
+                .route("auth-service",r->r
+                        .path("/auth/**")
+                        .uri("lb://AUTH-SERVICE"))
                 .route("eureka-sever",r  -> r
                         .path("/eureka/main")
                         .filters(f -> f.rewritePath("/eureka/main","/"))
