@@ -27,6 +27,17 @@
 #              predicates:
 #                - Path=/eureka/**
 
+app:
+  jwtSecret: M9I6vAzZgxgTVKe9ZzMZy7OLs/ly1G7d0ozukNY6hGE=
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          secret: "${app.jwtSecret}"
+
+
 
 server:
   port: 8080

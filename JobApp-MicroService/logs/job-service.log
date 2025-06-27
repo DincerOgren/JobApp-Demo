@@ -1,374 +1,214 @@
-2025-06-21T16:12:57.652+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : Starting JobApplication using Java 24.0.1 with PID 13200 (D:\Java Workspace\JobApp-Demo\JobApp-MicroService\job\target\classes started by dinoc in D:\Java Workspace\JobApp-Demo\JobApp-MicroService)
-2025-06-21T16:12:57.659+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : No active profile set, falling back to 1 default profile: "default"
-2025-06-21T16:12:57.707+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2025-06-21T16:12:57.707+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=job-service, profiles=[default], label=null, version=null, state=null
-2025-06-21T16:12:59.396+03:00  INFO 13200 --- [job-service] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2025-06-21T16:12:59.523+03:00  INFO 13200 --- [job-service] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 1 MongoDB repository interface.
-2025-06-21T16:12:59.760+03:00  INFO 13200 --- [job-service] [main] [                                                 ] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2025-06-21T16:12:59.767+03:00  INFO 13200 --- [job-service] [main] [                                                 ] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2025-06-21T16:12:59.957+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cc069fd6-f229-396e-8266-0ca774ac125c
-2025-06-21T16:13:00.429+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2025-06-21T16:13:00.445+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-21T16:13:00.446+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-21T16:13:00.518+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-21T16:13:00.518+03:00  INFO 13200 --- [job-service] [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2808 ms
-2025-06-21T16:13:01.299+03:00  INFO 13200 --- [job-service] [main] [                                                 ] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.4.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/24.0.1+9-30"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@440d2d64], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@1a712f12, com.mongodb.Jep395RecordCodecProvider@62525dd3, com.mongodb.KotlinCodecProvider@56adbb07]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@7be6dabb], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2025-06-21T16:13:01.317+03:00  INFO 13200 --- [job-service] [cluster-ClusterId{value='6856afddcd0c8827f4dcf8fe', description='null'}-localhost:27017] [                                                 ] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=33246500, minRoundTripTimeNanos=0}
-2025-06-21T16:13:01.389+03:00  WARN 13200 --- [job-service] [main] [                                                 ] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.List to interface org.springframework.data.domain.Vector as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
-2025-06-21T16:13:01.838+03:00  WARN 13200 --- [job-service] [main] [                                                 ] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.List to interface org.springframework.data.domain.Vector as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
-2025-06-21T16:13:03.015+03:00  WARN 13200 --- [job-service] [main] [                                                 ] c.f.c.c.BeanFactoryAwareFunctionRegistry : Failed to locate function 'busConsumer' for function definition 'busConsumer'. Returning null.
-2025-06-21T16:13:03.078+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'job-service.springCloudBusInput' has 1 subscriber(s).
-2025-06-21T16:13:03.311+03:00  INFO 13200 --- [job-service] [main] [                                                 ] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-06-21T16:13:03.353+03:00  WARN 13200 --- [job-service] [main] [                                                 ] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-06-21T16:13:03.361+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 35 endpoints beneath base path '/actuator'
-2025-06-21T16:13:03.482+03:00  INFO 13200 --- [job-service] [main] [                                                 ] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel errorChannel
-2025-06-21T16:13:03.486+03:00  INFO 13200 --- [job-service] [main] [                                                 ] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel springCloudBusInput
-2025-06-21T16:13:03.489+03:00  INFO 13200 --- [job-service] [main] [                                                 ] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel nullChannel
-2025-06-21T16:13:03.493+03:00  INFO 13200 --- [job-service] [main] [                                                 ] figuration$IntegrationJmxConfiguration$1 : Registering MessageHandler _org.springframework.integration.errorLogger
-2025-06-21T16:13:03.504+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2025-06-21T16:13:03.504+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.i.channel.PublishSubscribeChannel    : Channel 'job-service.errorChannel' has 1 subscriber(s).
-2025-06-21T16:13:03.506+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
-2025-06-21T16:13:03.557+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-06-21T16:13:03.583+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-06-21T16:13:03.588+03:00  INFO 13200 --- [job-service] [main] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:13:03.599+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-06-21T16:13:03.599+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-06-21T16:13:03.599+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-06-21T16:13:03.599+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-06-21T16:13:03.599+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-06-21T16:13:03.599+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-06-21T16:13:03.599+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-06-21T16:13:03.784+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-06-21T16:13:03.785+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-06-21T16:13:03.788+03:00  INFO 13200 --- [job-service] [main] [                                                 ] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-06-21T16:13:03.789+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1750511583789 with initial instances count: 1
-2025-06-21T16:13:03.792+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application JOB-SERVICE with eureka with status UP
-2025-06-21T16:13:03.793+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1750511583793, current=UP, previous=STARTING]
-2025-06-21T16:13:03.795+03:00  INFO 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOB-SERVICE/host.docker.internal:job-service:8082: registering service...
-2025-06-21T16:13:03.796+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
-2025-06-21T16:13:03.797+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for rabbit
-2025-06-21T16:13:03.845+03:00  INFO 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOB-SERVICE/host.docker.internal:job-service:8082 - registration status: 204
-2025-06-21T16:13:03.934+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
-2025-06-21T16:13:03.957+03:00  INFO 13200 --- [job-service] [main] [                                                 ] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.9AtzY115SFu5p083fjfF0g, bound to: springCloudBus
-2025-06-21T16:13:03.962+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2025-06-21T16:13:04.035+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#41962299:0/SimpleConnection@64b7719f [delegate=amqp://guest@127.0.0.1:5672/, localPort=57735]
-2025-06-21T16:13:04.117+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-899094347.springCloudBusInput.errors' has 1 subscriber(s).
-2025-06-21T16:13:04.118+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-899094347.springCloudBusInput.errors' has 2 subscriber(s).
-2025-06-21T16:13:04.145+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.9AtzY115SFu5p083fjfF0g'
-2025-06-21T16:13:04.160+03:00  INFO 13200 --- [job-service] [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2025-06-21T16:13:04.161+03:00  INFO 13200 --- [job-service] [main] [                                                 ] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
-2025-06-21T16:13:04.192+03:00  INFO 13200 --- [job-service] [main] [                                                 ] figuration$IntegrationJmxConfiguration$1 : Registering MessageChannel rabbit-899094347.springCloudBusInput.errors
-2025-06-21T16:13:04.234+03:00  INFO 13200 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : Started JobApplication in 7.948 seconds (process running for 9.165)
-2025-06-21T16:13:04.361+03:00  INFO 13200 --- [job-service] [RMI TCP Connection(3)-172.16.0.2] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-21T16:13:04.361+03:00  INFO 13200 --- [job-service] [RMI TCP Connection(3)-172.16.0.2] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-21T16:13:04.365+03:00  INFO 13200 --- [job-service] [RMI TCP Connection(3)-172.16.0.2] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2025-06-21T16:15:08.279+03:00  INFO 13200 --- [job-service] [http-nio-8082-exec-4] [6856b05b701f3338fa9c0712340dd381-c56e5f5d50035d08] com.jobapp.job.job.JobServiceImpl        : Job added successfully with id: 6856b05ccd0c8827f4dcf8ff
-2025-06-21T16:18:03.601+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:23:03.604+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:28:03.617+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:33:03.623+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:38:03.634+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:43:03.647+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:48:03.653+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:53:03.655+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T16:58:03.668+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:03:03.678+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:08:03.694+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:13:03.698+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:18:03.707+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:23:03.721+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:28:03.723+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:33:03.734+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:38:03.748+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:43:03.754+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:48:03.759+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:53:03.761+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T17:58:03.775+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T18:03:03.782+03:00  INFO 13200 --- [job-service] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-06-21T18:03:16.960+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application JOB-SERVICE with eureka with status DOWN
-2025-06-21T18:03:16.960+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1750518196960, current=DOWN, previous=UP]
-2025-06-21T18:03:16.960+03:00  INFO 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOB-SERVICE/host.docker.internal:job-service:8082: registering service...
-2025-06-21T18:03:16.975+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-21T18:03:16.980+03:00  INFO 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/JOB-SERVICE": localhost:8761 failed to respond stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/JOB-SERVICE": localhost:8761 failed to respond
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
-	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
-	at java.base/java.lang.Thread.run(Thread.java:1447)
-Caused by: org.apache.hc.core5.http.NoHttpResponseException: localhost:8761 failed to respond
-	at org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:333)
-	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:196)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.lambda$execute$0(InternalExecRuntime.java:236)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:791)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:233)
-	at org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:120)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:198)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 21 more
+2025-06-26T23:40:20.020+03:00  INFO 29324 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : Starting JobApplication using Java 24.0.1 with PID 29324 (D:\Java Workspace\JobApp-Demo\JobApp-MicroService\job\target\classes started by dinoc in D:\Java Workspace\JobApp-Demo\JobApp-MicroService)
+2025-06-26T23:40:20.032+03:00  INFO 29324 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-06-26T23:40:20.115+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-06-26T23:40:20.115+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=job-service, profiles=[default], label=null, version=null, state=null
+2025-06-26T23:40:23.292+03:00  INFO 29324 --- [job-service] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-06-26T23:40:23.567+03:00  INFO 29324 --- [job-service] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 261 ms. Found 1 MongoDB repository interface.
+2025-06-26T23:40:24.358+03:00  INFO 29324 --- [job-service] [main] [                                                 ] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-06-26T23:40:24.401+03:00  INFO 29324 --- [job-service] [main] [                                                 ] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-06-26T23:40:24.923+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e8887af7-dd1b-3b10-be7e-f06d70b6b462
+2025-06-26T23:40:25.685+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-06-26T23:40:25.716+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-26T23:40:25.717+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-26T23:40:25.854+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-26T23:40:25.855+03:00  INFO 29324 --- [job-service] [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5735 ms
+2025-06-26T23:40:27.216+03:00  INFO 29324 --- [job-service] [main] [                                                 ] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.4.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/24.0.1+9-30"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@5a464be7], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@170f0fd6, com.mongodb.Jep395RecordCodecProvider@48d24d63, com.mongodb.KotlinCodecProvider@695c8b32]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@1adec8d], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-06-26T23:40:27.239+03:00  INFO 29324 --- [job-service] [cluster-ClusterId{value='685db03b1ce3a129a317a36e', description='null'}-localhost:27017] [                                                 ] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=51553200, minRoundTripTimeNanos=0}
+2025-06-26T23:40:27.380+03:00  WARN 29324 --- [job-service] [main] [                                                 ] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.List to interface org.springframework.data.domain.Vector as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-26T23:40:27.983+03:00  WARN 29324 --- [job-service] [main] [                                                 ] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.List to interface org.springframework.data.domain.Vector as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-26T23:40:29.959+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 35 endpoints beneath base path '/actuator'
+2025-06-26T23:40:30.212+03:00  WARN 29324 --- [job-service] [main] [                                                 ] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'filterChain' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: No qualifying bean of type 'org.springframework.security.oauth2.jwt.JwtDecoder' available
+2025-06-26T23:40:31.233+03:00  WARN 29324 --- [job-service] [main] [                                                 ] z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2025-06-26T23:40:31.238+03:00  INFO 29324 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-06-26T23:40:31.269+03:00  INFO 29324 --- [job-service] [main] [                                                 ] .s.b.a.l.ConditionEvaluationReportLogger : 
 
-2025-06-21T18:03:16.981+03:00  WARN 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/JOB-SERVICE": localhost:8761 failed to respond
-2025-06-21T18:03:16.995+03:00  INFO 13200 --- [job-service] [tomcat-shutdown] [                                                 ] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-21T18:03:17.007+03:00  INFO 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/JOB-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/JOB-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
-	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
-	at java.base/java.lang.Thread.run(Thread.java:1447)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
-	at java.base/java.net.Socket.connect(Socket.java:665)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 22 more
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-26T23:40:31.303+03:00 ERROR 29324 --- [job-service] [main] [                                                 ] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-2025-06-21T18:03:17.007+03:00  WARN 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/JOB-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-21T18:03:17.007+03:00  WARN 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOB-SERVICE/host.docker.internal:job-service:8082 - registration failed Cannot execute request on any known server
+***************************
+APPLICATION FAILED TO START
+***************************
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Description:
 
-2025-06-21T18:03:17.015+03:00  WARN 13200 --- [job-service] [DiscoveryClient-InstanceInfoReplicator-%d] [                                                 ] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+Parameter 0 of method setFilterChains in org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration required a bean of type 'org.springframework.security.oauth2.jwt.JwtDecoder' that could not be found.
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
 
-2025-06-21T18:03:17.032+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-06-21T18:03:17.310+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-06-21T18:03:17.311+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.9AtzY115SFu5p083fjfF0g'
-2025-06-21T18:03:17.314+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.c.stream.binder.BinderErrorChannel   : Channel 'job-service.rabbit-899094347.springCloudBusInput.errors' has 1 subscriber(s).
-2025-06-21T18:03:17.317+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.c.stream.binder.BinderErrorChannel   : Channel 'job-service.rabbit-899094347.springCloudBusInput.errors' has 0 subscriber(s).
-2025-06-21T18:03:17.336+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2025-06-21T18:03:17.336+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.i.channel.PublishSubscribeChannel    : Channel 'job-service.errorChannel' has 0 subscriber(s).
-2025-06-21T18:03:17.337+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
-2025-06-21T18:03:18.370+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-06-21T18:03:21.382+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-06-21T18:03:21.405+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/JOB-SERVICE/host.docker.internal:job-service:8082": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/JOB-SERVICE/host.docker.internal:job-service:8082": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1474)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1467)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
-	at java.base/java.lang.Thread.run(Thread.java:1447)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
-	at java.base/java.net.Socket.connect(Socket.java:665)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 38 more
+Action:
 
-2025-06-21T18:03:21.406+03:00  WARN 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/JOB-SERVICE/host.docker.internal:job-service:8082": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-06-21T18:03:21.406+03:00 ERROR 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JOB-SERVICE/host.docker.internal:job-service:8082 - de-registration failedCannot execute request on any known server
+Consider defining a bean of type 'org.springframework.security.oauth2.jwt.JwtDecoder' in your configuration.
 
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900) ~[eureka-client-2.0.4.jar:2.0.4]
+2025-06-26T23:42:47.967+03:00  INFO 35124 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : Starting JobApplication using Java 24.0.1 with PID 35124 (D:\Java Workspace\JobApp-Demo\JobApp-MicroService\job\target\classes started by dinoc in D:\Java Workspace\JobApp-Demo\JobApp-MicroService)
+2025-06-26T23:42:47.974+03:00  INFO 35124 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-06-26T23:42:48.068+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-06-26T23:42:48.069+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=job-service, profiles=[default], label=null, version=null, state=null
+2025-06-26T23:42:51.490+03:00  INFO 35124 --- [job-service] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-06-26T23:42:51.815+03:00  INFO 35124 --- [job-service] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 305 ms. Found 1 MongoDB repository interface.
+2025-06-26T23:42:52.373+03:00  INFO 35124 --- [job-service] [main] [                                                 ] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-06-26T23:42:52.391+03:00  INFO 35124 --- [job-service] [main] [                                                 ] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-06-26T23:42:52.846+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e8887af7-dd1b-3b10-be7e-f06d70b6b462
+2025-06-26T23:42:53.655+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-06-26T23:42:53.690+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-26T23:42:53.691+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-26T23:42:53.837+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-26T23:42:53.837+03:00  INFO 35124 --- [job-service] [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5761 ms
+2025-06-26T23:42:55.697+03:00  INFO 35124 --- [job-service] [main] [                                                 ] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.4.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/24.0.1+9-30"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@36ec4071], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5d8112e6, com.mongodb.Jep395RecordCodecProvider@20d92f1e, com.mongodb.KotlinCodecProvider@3cf7433e]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@68cc6319], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-06-26T23:42:55.729+03:00  INFO 35124 --- [job-service] [cluster-ClusterId{value='685db0cf5652004813e8f11e', description='null'}-localhost:27017] [                                                 ] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=71760400, minRoundTripTimeNanos=0}
+2025-06-26T23:42:55.950+03:00  WARN 35124 --- [job-service] [main] [                                                 ] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.List to interface org.springframework.data.domain.Vector as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-26T23:42:56.878+03:00  WARN 35124 --- [job-service] [main] [                                                 ] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.List to interface org.springframework.data.domain.Vector as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-26T23:42:59.276+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 35 endpoints beneath base path '/actuator'
+2025-06-26T23:42:59.627+03:00  WARN 35124 --- [job-service] [main] [                                                 ] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'filterChain' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: No qualifying bean of type 'org.springframework.security.oauth2.jwt.JwtDecoder' available
+2025-06-26T23:43:00.659+03:00  WARN 35124 --- [job-service] [main] [                                                 ] z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2025-06-26T23:43:00.663+03:00  INFO 35124 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-06-26T23:43:00.702+03:00  INFO 35124 --- [job-service] [main] [                                                 ] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-26T23:43:00.749+03:00 ERROR 35124 --- [job-service] [main] [                                                 ] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method setFilterChains in org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration required a bean of type 'org.springframework.security.oauth2.jwt.JwtDecoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.oauth2.jwt.JwtDecoder' in your configuration.
+
+2025-06-26T23:54:50.787+03:00  INFO 35392 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : Starting JobApplication using Java 24.0.1 with PID 35392 (D:\Java Workspace\JobApp-Demo\JobApp-MicroService\job\target\classes started by dinoc in D:\Java Workspace\JobApp-Demo\JobApp-MicroService)
+2025-06-26T23:54:50.793+03:00  INFO 35392 --- [job-service] [main] [                                                 ] com.jobapp.job.JobApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-06-26T23:54:50.865+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-06-26T23:54:50.865+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=job-service, profiles=[default], label=null, version=null, state=null
+2025-06-26T23:54:54.173+03:00  INFO 35392 --- [job-service] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2025-06-26T23:54:54.431+03:00  INFO 35392 --- [job-service] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 243 ms. Found 1 MongoDB repository interface.
+2025-06-26T23:54:54.873+03:00  INFO 35392 --- [job-service] [main] [                                                 ] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-06-26T23:54:54.887+03:00  INFO 35392 --- [job-service] [main] [                                                 ] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-06-26T23:54:55.332+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d3b27f0c-82aa-3082-a7df-b44d96364cb3
+2025-06-26T23:54:56.192+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-06-26T23:54:56.249+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-26T23:54:56.250+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-26T23:54:56.398+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-26T23:54:56.399+03:00  INFO 35392 --- [job-service] [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5528 ms
+2025-06-26T23:54:58.039+03:00  INFO 35392 --- [job-service] [main] [                                                 ] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.4.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/24.0.1+9-30"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@8aafd70], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3c717ef2, com.mongodb.Jep395RecordCodecProvider@7ca0b05e, com.mongodb.KotlinCodecProvider@3e5ed0d4]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@61c0fb12], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2025-06-26T23:54:58.058+03:00  INFO 35392 --- [job-service] [cluster-ClusterId{value='685db3a1ef7c1097d56edd50', description='null'}-localhost:27017] [                                                 ] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=48160400, minRoundTripTimeNanos=0}
+2025-06-26T23:54:58.190+03:00  WARN 35392 --- [job-service] [main] [                                                 ] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.List to interface org.springframework.data.domain.Vector as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-26T23:54:58.897+03:00  WARN 35392 --- [job-service] [main] [                                                 ] o.s.data.convert.CustomConversions       : Registering converter from interface java.util.List to interface org.springframework.data.domain.Vector as reading converter although it doesn't convert from a store-supported type; You might want to check your annotation setup at the converter implementation
+2025-06-26T23:55:00.934+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 35 endpoints beneath base path '/actuator'
+2025-06-26T23:55:01.154+03:00  WARN 35392 --- [job-service] [main] [                                                 ] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'filterChain' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'jwtDecoder' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception with message: null
+2025-06-26T23:55:02.175+03:00  WARN 35392 --- [job-service] [main] [                                                 ] z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2025-06-26T23:55:02.180+03:00  INFO 35392 --- [job-service] [main] [                                                 ] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-06-26T23:55:02.210+03:00  INFO 35392 --- [job-service] [main] [                                                 ] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-26T23:55:02.244+03:00 ERROR 35392 --- [job-service] [main] [                                                 ] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'filterChain' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'jwtDecoder' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception with message: null
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:896) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:849) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.7.jar:6.2.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.7.jar:6.2.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.5.0.jar:3.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.5.0.jar:3.5.0]
+	at com.jobapp.job.JobApplication.main(JobApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'filterChain' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'jwtDecoder' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception with message: null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1992) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1956) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeanCollection(DefaultListableBeanFactory.java:1846) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1814) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1689) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:888) ~[spring-beans-6.2.7.jar:6.2.7]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'filterChain' threw exception with message: Error creating bean with name 'jwtDecoder' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception with message: null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.7.jar:6.2.7]
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtDecoder' defined in class path resource [com/jobapp/job/config/SecurityConfig.class]: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception with message: null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1598) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1556) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:563) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:392) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:385) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1290) ~[spring-context-6.2.7.jar:6.2.7]
+	at org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer$JwtConfigurer.getJwtDecoder(OAuth2ResourceServerConfigurer.java:439) ~[spring-security-config-6.5.0.jar:6.5.0]
+	at org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer$JwtConfigurer.getAuthenticationProvider(OAuth2ResourceServerConfigurer.java:448) ~[spring-security-config-6.5.0.jar:6.5.0]
+	at org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer.getAuthenticationProvider(OAuth2ResourceServerConfigurer.java:348) ~[spring-security-config-6.5.0.jar:6.5.0]
+	at org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer.init(OAuth2ResourceServerConfigurer.java:266) ~[spring-security-config-6.5.0.jar:6.5.0]
+	at org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer.init(OAuth2ResourceServerConfigurer.java:147) ~[spring-security-config-6.5.0.jar:6.5.0]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:387) ~[spring-security-config-6.5.0.jar:6.5.0]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:349) ~[spring-security-config-6.5.0.jar:6.5.0]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-6.5.0.jar:6.5.0]
+	at com.jobapp.job.config.SecurityConfig.filterChain(SecurityConfig.java:52) ~[classes/:na]
+	at com.jobapp.job.config.SecurityConfig$$SpringCGLIB$$0.CGLIB$filterChain$0(<generated>) ~[classes/:na]
+	at com.jobapp.job.config.SecurityConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.2.7.jar:6.2.7]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:393) ~[spring-context-6.2.7.jar:6.2.7]
+	at com.jobapp.job.config.SecurityConfig$$SpringCGLIB$$0.filterChain(<generated>) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387) ~[spring-cloud-context-4.3.0.jar:4.3.0]
-	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134) ~[spring-cloud-context-4.3.0.jar:4.3.0]
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1474) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1467) ~[spring-beans-6.2.7.jar:6.2.7]
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219) ~[spring-context-6.2.7.jar:6.2.7]
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180) ~[spring-context-6.2.7.jar:6.2.7]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179) ~[spring-boot-3.5.0.jar:3.5.0]
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126) ~[spring-context-6.2.7.jar:6.2.7]
-	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147) ~[spring-boot-3.5.0.jar:3.5.0]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116) ~[spring-boot-3.5.0.jar:3.5.0]
-	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.7.jar:6.2.7]
+	... 42 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.oauth2.jwt.JwtDecoder]: Factory method 'jwtDecoder' threw exception with message: null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.7.jar:6.2.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.7.jar:6.2.7]
+	... 74 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: null
+	at com.jobapp.job.config.SecurityConfig.jwtDecoder(SecurityConfig.java:29) ~[classes/:na]
+	at com.jobapp.job.config.SecurityConfig$$SpringCGLIB$$0.CGLIB$jwtDecoder$1(<generated>) ~[classes/:na]
+	at com.jobapp.job.config.SecurityConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.2.7.jar:6.2.7]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:393) ~[spring-context-6.2.7.jar:6.2.7]
+	at com.jobapp.job.config.SecurityConfig$$SpringCGLIB$$0.jwtDecoder(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.7.jar:6.2.7]
+	... 77 common frames omitted
+Caused by: io.jsonwebtoken.lang.UnknownClassException: Unable to load class named [io.jsonwebtoken.impl.security.KeysBridge] from the thread context, current, or system/application ClassLoaders.  All heuristics have been exhausted.  Class could not be found.  Have you remembered to include the jjwt-impl.jar in your runtime classpath?
+	at io.jsonwebtoken.lang.Classes.forName(Classes.java:90) ~[jjwt-api-0.12.6.jar:0.12.6]
+	at io.jsonwebtoken.security.Keys.<clinit>(Keys.java:37) ~[jjwt-api-0.12.6.jar:0.12.6]
+	... 86 common frames omitted
 
-2025-06-21T18:03:21.407+03:00  INFO 13200 --- [job-service] [SpringApplicationShutdownHook] [                                                 ] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

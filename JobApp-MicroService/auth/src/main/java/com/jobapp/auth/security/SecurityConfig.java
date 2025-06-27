@@ -35,7 +35,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // Disable CSRF for APIs
                 .authorizeHttpRequests(auth -> auth
                         //.requestMatchers("/api/v1/users/register", "/api/v1/users/login").permitAll()
-                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
 
                 )
                 .formLogin(AbstractHttpConfigurer::disable) // <<<< DISABLES THE DEFAULT LOGIN PANEL

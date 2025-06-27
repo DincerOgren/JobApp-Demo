@@ -15,7 +15,11 @@ spring:
     port: 5672
     username: guest
     password: guest
-
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          secret: "${app.jwtSecret}"
 management:
   endpoints:
     web:
@@ -31,6 +35,7 @@ server:
 
 app:
   message: "Hello review service!"
+  jwtSecret: M9I6vAzZgxgTVKe9ZzMZy7OLs/ly1G7d0ozukNY6hGE=
 
 eureka:
   client:
